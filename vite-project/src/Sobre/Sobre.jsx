@@ -1,3 +1,5 @@
+//Gabriel Henrique Fonseca Castro
+//Gabriel Abreu Miller Godoi
 import { Link } from "react-router-dom";
 
 function Sobre() {

@@ -1,3 +1,5 @@
+//Gabriel Henrique Fonseca Castro
+//Gabriel Abreu Miller Godoi
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
