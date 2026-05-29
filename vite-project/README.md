@@ -1,16 +1,23 @@
-# React + Vite
+# Oráculo do Futebol (Vite Project)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o diretório da aplicação React + Vite do projeto **Oráculo do Futebol (Oráculo 1.0)**.
 
-Currently, two official plugins are available:
+> [!NOTE]  
+> A documentação principal detalhada, contendo a **proposta de IHC (Interação Humano-Computador)**, as tecnologias, as funcionalidades completas e os detalhes dos autores está disponível no **[README principal na raiz do projeto (../README.md)](../README.md)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Como rodar o projeto a partir deste diretório:
 
-## React Compiler
+1. **Instalar dependências:**
+   ```bash
+   npm install
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. **Iniciar servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Gerar build de produção:**
+   ```bash
+   npm run build
+   ```
