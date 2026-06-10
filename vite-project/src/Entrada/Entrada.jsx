@@ -194,14 +194,7 @@ function Entrada() {
             </div>
           )}
 
-          <div style={{ 
-            display: 'flex', 
-            alignItems: 'stretch', 
-            justifyContent: 'center',
-            gap: '20px',
-            width: '100%',
-            flexWrap: 'wrap'
-          }}>
+          <div className="matchup-container">
             
             <article className="time-card">
               <label htmlFor="selectTime1" style={{ color: '#333', marginBottom: '10px', fontWeight: 'bold', fontSize: '1.2rem' }}>Time da casa:</label>
@@ -230,15 +223,7 @@ function Entrada() {
               {renderFormaRecente(dadosTime1?.formaRecente)}
             </article>
 
-            <div style={{
-              width: '60px', height: '60px',
-              backgroundColor: '#ffc107',
-              borderRadius: '50%',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: '2rem', fontWeight: 'bold', color: '#333',
-              boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
-              alignSelf: 'center'
-            }} aria-hidden="true">
+            <div className="matchup-divisor" aria-hidden="true">
               X
             </div>
 
