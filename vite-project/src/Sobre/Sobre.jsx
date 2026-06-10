@@ -2,6 +2,12 @@
 //Gabriel Abreu Miller Godoi
 import { Link } from "react-router-dom";
 
+/**
+ * Componente funcional da tela Sobre (Sobre).
+ * Exibe informações contextuais sobre o projeto "Oráculo 1.0",
+ * descrevendo seu objetivo, os autores e a fundamentação em conceitos de IHC (Interação Humano-Computador).
+ * Fornece também um link para retornar à tela inicial.
+ */
 function Sobre() {
   return (
     <main style={{

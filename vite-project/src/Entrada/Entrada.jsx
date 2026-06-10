@@ -7,6 +7,11 @@ import logoOraculo from "../assets/Oraculo.png";
 
 import { BancodeDadosTimes } from "../mockdb";
 
+/**
+ * Componente principal da Tela de Entrada (Entrada).
+ * Gerencia a lógica de seleção de dois times de futebol, calcula a previsão de resultados
+ * com base nos dados estatísticos e renderiza o layout interativo da página inicial do Oráculo.
+ */
 function Entrada() {
   const [Time1, setTime1] = useState("");
   const [Time2, setTime2] = useState("");
@@ -16,10 +21,25 @@ function Entrada() {
   const dadosTime1 = Time1 ? BancodeDadosTimes.find(t => t.nome === Time1) : null;
   const dadosTime2 = Time2 ? BancodeDadosTimes.find(t => t.nome === Time2) : null;
 
+  /**
+   * Calcula um índice de força pontual para um determinado time.
+   * Utiliza a fórmula simples: (vitórias * 3) + empates - derrotas.
+   * 
+   * @param {Object} time - Objeto contendo dados do time (vitórias, empates, derrotas).
+   * @returns {number} O valor numérico que representa a força/desempenho recente do time.
+   */
   const calcularForca = (time) => {
     return time.vitorias * 3 + time.empates - time.derrotas;
   };
 
+  /**
+   * Manipula a ação de submissão do formulário para consultar o Oráculo.
+   * Valida se os dois times foram selecionados e se são diferentes.
+   * Realiza a análise estatística comparando as forças calculadas de cada equipe,
+   * define as chances percentuais e gera o feedback em texto do resultado.
+   * 
+   * @param {Event} e - O evento de envio do formulário.
+   */
   const handlePrevisao = (e) => {
     e.preventDefault(); 
     setErro("");
@@ -64,6 +84,13 @@ function Entrada() {
     }
   };
 
+  /**
+   * Renderiza os sinalizadores visuais circulares com o histórico de jogos recentes de um time.
+   * As cores representam: Verde (Vitória - V), Amarelo (Empate - E), Vermelho (Derrota - D).
+   * 
+   * @param {Array<string>} forma - Array com a sequência recente de resultados (Ex: ['V', 'E', 'D', 'V', 'V']).
+   * @returns {JSX.Element} Conjunto de elementos HTML estilizados representando a forma recente.
+   */
   const renderFormaRecente = (forma) => {
     if(!forma) {
       return(
@@ -111,6 +138,12 @@ function Entrada() {
       );
   };
 
+  /**
+   * Formata e exibe de forma concisa as estatísticas de Vitórias, Empates e Derrotas do time selecionado.
+   * 
+   * @param {Object} dadosTime - Dados estatísticos do time (ou null caso não selecionado).
+   * @returns {string} String formatada no padrão "Xv Ye Zd" ou "--" se inválido/nulo.
+   */
   const renderVED = (dadosTime) => {
     if (!dadosTime) {
       return "--";

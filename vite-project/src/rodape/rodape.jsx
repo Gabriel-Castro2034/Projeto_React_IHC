@@ -2,6 +2,11 @@
 //Gabriel Abreu Miller Godoi
 import { Link } from "react-router-dom";
 
+/**
+ * Componente funcional do Rodapé (Rodape).
+ * Renderiza a seção inferior (footer) global de todas as telas,
+ * contendo a identificação dos autores do projeto e um atalho de navegação para a página "Sobre".
+ */
 function Rodape() {
   return (
     <footer className="rodape-global">
